@@ -32,7 +32,8 @@ pipeline {
         }        
         steps {
             script {
-                downloadMtarFile(script: this, promoteInfo: PROMOTEINFO)
+              downloadMtarFile(script: this, promoteInfo: PROMOTEINFO)
+              verifyMtarFileSignature(promoteInfo: PROMOTEINFO)
             }
         }
     }
