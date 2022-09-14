@@ -1,0 +1,5 @@
+{
+  "base.artifact": "cloud-ci-service-cf",
+  "base.group": "com.sap.cloudci.service.cf",
+  "base.version": "0.0.1-20220909124441+7b2ca1b1e039610436d2cb5511ba6eeacc69572b"
+}
