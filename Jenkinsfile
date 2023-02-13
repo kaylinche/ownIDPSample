@@ -25,7 +25,7 @@ pipeline {
                 echo "Promote Info: ${PROMOTEINFO}"
               
               if (env.BRANCH_NAME == "master") {
-                  echo "triggered by master"
+                  echo "triggered by ${env.BRANCH_NAME}"
                 } else {
                 echo "${env.BRANCH_NAME}"
                 }
