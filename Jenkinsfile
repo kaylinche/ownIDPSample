@@ -24,7 +24,7 @@ pipeline {
                 VERSION = "${PROMOTEINFO.'base.version'}-release-${env.GIT_COMMIT}"
                 echo "Promote Info: ${PROMOTEINFO}"
               
-              if (${env.BRANCH_NAME} == "master") {
+              if (env.BRANCH_NAME == "master") {
                   echo "triggered by master"
                 } else {
                 echo "${env.BRANCH_NAME}"
