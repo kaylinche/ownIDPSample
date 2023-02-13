@@ -23,17 +23,10 @@ pipeline {
                 PROMOTEINFO = readJSON file: "${env.WORKSPACE}/xmake_promote.json"
                 VERSION = "${PROMOTEINFO.'base.version'}-release-${env.GIT_COMMIT}"
                 echo "Promote Info: ${PROMOTEINFO}"
-            }
-        }
-    }
-    stage("Download MTAR File and Verify its Signature") {
-        when {
-            branch 'master'
-        }        
-        steps {
-            script {
-              downloadMtarFile(script: this, promoteInfo: PROMOTEINFO)
-              verifyMtarFileSignature(promoteInfo: PROMOTEINFO)
+              
+                if (env.BRANCH_NAME == "master") {
+                  echo 'triggered by master'
+                }
             }
         }
     }
