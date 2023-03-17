@@ -3,7 +3,7 @@ pipeline {
   options {
       buildDiscarder(logRotator(
           // number of builds to keep
-          numToKeepStr: env.BRANCH_NAME ==~ /master/ ? '5' : '3'
+          numToKeepStr: env.BRANCH_NAME !=~ /master/ ? '3'
       ))
   }
   stages {
