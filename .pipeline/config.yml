@@ -1,6 +1,6 @@
 general:
   buildTool: 'npm'
-  gitSshKeyCredentialsId: 'gitHubStatusFeedback'
+  gitHttpsCredentialsId: 'pccibuild_private_github_wdf_user_token'
 steps:
   cloudFoundryDeploy:
     deployTool: 'cf_native'
