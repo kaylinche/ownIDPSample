@@ -1,0 +1,11 @@
+general:
+  buildTool: 'npm'
+  gitSshKeyCredentialsId: 'gitHubStatusFeedback'
+steps:
+  cloudFoundryDeploy:
+    deployTool: 'cf_native'
+    cloudFoundry:
+      org: 'CLOUDCIDEV_cicddev'
+      space: 'd036667'
+      credentialsId: 'testKayCF'
+      loginParameters: '--origin cicddev-platform'
