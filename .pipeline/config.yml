@@ -1,7 +1,6 @@
-general:
-  buildTool: 'npm'
-  gitHttpsCredentialsId: 'pccibuild_private_github_wdf_user_token'
 steps:
+  buildExecute:
+    buildTool: 'npm'
   cloudFoundryDeploy:
     deployTool: 'cf_native'
     cloudFoundry:

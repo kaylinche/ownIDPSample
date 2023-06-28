@@ -1,3 +1,7 @@
 @Library('piper-lib-os') _
 
-piperPipeline script: this
+node {
+  setupCommonPipelineEnvironment script: this
+  buildExecute script:this
+  cloudFoundryDeploy script: this
+}
