@@ -7,7 +7,8 @@
     "node": "18.x.x"
   },
   "scripts": {
-    "start": "node start.js"
+    "start": "node start.js",
+    "build": "node --version"
   },
   "author": "",
   "license": "ISC",
